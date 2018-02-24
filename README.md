@@ -49,3 +49,21 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Fully connected		| Input 84, Output 43									|
 | Softmax				|      									|
+
+
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+
+To train the model, I used an ADAM optimizer, regularization and dropout. Regularization and dropout increased the training and validation accuracy to a high value.
+A dropout of 0.75 was found to be optimum. With a lower value the training accuracy would suffer. Any value higher 0.75 was giving a 100% training accuracy which may indicate overfitting.
+Regularization is another technique to avoid overfitting. I chose the regularization constant to be 0.0005 as higher values were clamping training accuracy at around 80% and validation accuracy to lower accuracies.
+LeNet is an already well set architecture. But instead of using its max pooling, I tried average pooling. It did not improve or adversely effect the accuracies.
+
+My final model results were:
+* training set accuracy of 99%
+* validation set accuracy of 96%
+* test set accuracy of 94%
+
+
+### Test a Model on New Images
+
+The 5 images found on the web are displayed in the notebook. The images had to resized to 32x32x3
